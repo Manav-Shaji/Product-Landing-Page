@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GadgetPro | Landing Page</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="logo">GadgetPro</div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#contact" id="contactTrigger">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero fade-in-up">
+            <div class="hero-text">
+                <h1>SmartX Pro</h1>
+                <p>
+                    Experience the future of wearable tech with SmartX Pro — a
+                    gadget built to empower your lifestyle.
+                </p>
+                <a href="#product" class="btn">Buy Now</a>
+            </div>
+            <div class="hero-img">
+                <img src="Assets/watch.jpg" alt="Smart Gadget" />
+            </div>
+        </section>
+
+        <section id="features" class="features fade-in-up">
+            <h2>Why Choose SmartX Pro?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-battery-full fa-2x"></i>
+                    <h3>Long Battery Life</h3>
+                    <p>Stay powered for days with a single charge.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heartbeat fa-2x"></i>
+                    <h3>Health Tracking</h3>
+                    <p>
+                        Monitor heart rate, sleep, and activity with accuracy.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-water fa-2x"></i>
+                    <h3>Water Resistant</h3>
+                    <p>Wear it anywhere, worry-free.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bell fa-2x"></i>
+                    <h3>Smart Notifications</h3>
+                    <p>
+                        Get alerts for calls, texts, and apps right on your
+                        wrist.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="product fade-in-up">
+            <h2>Meet SmartX Pro</h2>
+            <div class="product-display">
+                <img src="Assets/watch.jpg" alt="Product" />
+                <div class="product-info">
+                    <p>
+                        The SmartX Pro combines elegance and performance in one
+                        device. Lightweight, durable, and intelligent — it's
+                        your perfect companion.
+                    </p>
+                    <button class="btn" onclick="addToCart()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Message Box with Contact Form -->
+        <div id="customMessageBoxOverlay" class="message-box-overlay">
+            <div class="message-box">
+                <h3 id="messageBoxTitle">Contact Us</h3>
+                <form id="contactForm">
+                    <p>Have questions? We'd love to hear from you.</p>
+                    <input
+                        type="text"
+                        id="contactName"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <textarea
+                        id="contactMessage"
+                        name="message"
+                        placeholder="Your Message"
+                        rows="4"
+                        required
+                    ></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+                <button
+                    id="messageBoxCloseButton"
+                    class="btn"
+                    style="margin-top: 1rem"
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+
+        <footer id="contact">
+            <p>© 2025 GadgetPro. All rights reserved.</p>
+            <p>Contact: info@gadgetpro.com</p>
+        </footer>
+
+        <!-- Scroll-to-top button -->
+        <button id="scrollTopBtn" title="Back to Top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <script src="script.js"></script>
+    </body>
+</html>
